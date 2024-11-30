@@ -176,7 +176,7 @@ const key_override_t lt_key_override =
 const key_override_t dquo_key_override =
     ko_make_with_layers(MOD_MASK_SHIFT, KC_MINS, KC_DQUO, 1);
 
-const key_override_t *key_overrides[] = {
+const key_override_t **key_overrides = (const key_override_t *[]){
 	&unds_key_override,
 	&ques_key_override,
 	&lt_key_override,
