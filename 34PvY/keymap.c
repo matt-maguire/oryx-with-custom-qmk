@@ -164,3 +164,21 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 
 
+
+
+// Custom QMK here
+const key_override_t unds_key_override =
+    ko_make_basic(MOD_MASK_SHIFT, KC_QUOT, KC_UNDS, 1);
+const key_override_t ques_key_override =
+    ko_make_basic(MOD_MASK_SHIFT, KC_COMM, KC_QUES, 1);
+const key_override_t lt_key_override =
+    ko_make_basic(MOD_MASK_SHIFT, KC_SLSH, KC_LT, 1);
+const key_override_t dquo_key_override =
+    ko_make_basic(MOD_MASK_SHIFT, KC_MINS, KC_DQUO, 1);
+
+const key_override_t *key_overrides[] = {
+	&unds_key_override,
+	&ques_key_override,
+	&lt_key_override,
+	&dquo_key_override
+};
