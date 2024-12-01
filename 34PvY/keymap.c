@@ -168,17 +168,17 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 // Custom QMK here
 const key_override_t unds_key_override =
-    ko_make_with_layers(MOD_MASK_SHIFT, KC_QUOT, KC_MINS, 1);
-const key_override_t ques_key_override =
-    ko_make_with_layers(MOD_MASK_SHIFT, KC_COMM, KC_SLSH, 1);
-const key_override_t lt_key_override =
-    ko_make_with_layers(MOD_MASK_SHIFT, KC_SLSH, KC_COMM, 1);
-const key_override_t dquo_key_override =
-    ko_make_with_layers(MOD_MASK_SHIFT, KC_MINS, KC_QUOT, 1);
+    ko_make_basic(MOD_MASK_SHIFT, KC_QUOTE, KC_MINS);
+//const key_override_t ques_key_override =
+//    ko_make_basic(MOD_MASK_SHIFT, KC_COMM, KC_SLSH);
+//const key_override_t lt_key_override =
+//    ko_make_basic(MOD_MASK_SHIFT, KC_SLSH, KC_COMM);
+//const key_override_t dquo_key_override =
+//    ko_make_basic(MOD_MASK_SHIFT, KC_MINS, KC_QUOT);
 
 const key_override_t **key_overrides = (const key_override_t *[]){
 	&unds_key_override,
-	&ques_key_override,
-	&lt_key_override,
-	&dquo_key_override
+//	&ques_key_override,
+//	&lt_key_override,
+//	&dquo_key_override
 };
